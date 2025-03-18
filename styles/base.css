@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swapstyles/base.css);
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +31,10 @@ nav {
     display: flex;
     justify-content: space-evenly;
     font-weight: bold;
+}
+
+nav a:hover {
+    color: lightgreen;
 }
 
 nav a {
