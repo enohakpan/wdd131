@@ -13,6 +13,7 @@ body {
 
 header h1 {
     background-color: blue;
+    color: aqua;
     padding: 3rem;
     display: flex;
     justify-content: center;
@@ -31,8 +32,9 @@ nav {
     font-weight: bold;
 }
 
-a {
+nav a {
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .all-main {
@@ -88,7 +90,11 @@ a {
 
 .content p {
     padding: 0;
-    margin: 0;
+    margin-right: 15px;
+}
+
+.flag {
+    margin-left: 15px;
 }
 
 .content {
