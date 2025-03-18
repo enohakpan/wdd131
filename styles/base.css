@@ -25,7 +25,7 @@ header h1 {
 }
 
 nav {
-    background-color: gray;
+    background-color: rgb(5, 5, 5);
     padding: 1.5rem;
     display: flex;
     justify-content: space-evenly;
@@ -34,7 +34,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .all-main {
@@ -132,6 +132,7 @@ ul li {
 
 li:hover {
     background: violet;
+    width: 200px;
 }
 
 footer {
@@ -144,7 +145,7 @@ footer {
 
 
 footer p:nth-of-type(2) {
-    color: rgb(58, 189, 58);
+    color: rgb(236, 236, 236);
     font-style: italic;
     opacity: 0.8;
 }
