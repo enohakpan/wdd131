@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header h1 {
+    background-color: blue;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.highlight {
+    color: #fdd835;
+    font-weight: bold;
+}
+
+nav {
+    background-color: gray;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.all-main {
+    margin: 30px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.about-me {
+    border: 1px solid black;
+    border-radius: 0.7em 0.7em 0 0;
+}
+
+.about-me-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.title {
+    background-color: rgb(66, 35, 66);
+    color: aqua;
+    padding: 0.5rem;
+    border-radius: 0.4em 0.4em 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-card {
+    display: grid;
+
+}
+
+.about-me-card img {
+    width: 100px;
+    height: 120px;
+}
+
+.card-location h2 {
+    text-decoration: underline;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content img {
+    width: 160px;
+    height: 120px;
+}
+
+.content p {
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-resources {
+    border: 1px solid black;
+    border-radius: 0.7em 0.7em 0 0;
+}
+
+.card-resources h2 {
+    background-color: rgb(66, 35, 66);
+    color: aqua;
+    padding: 0.5rem;
+    border-radius: 0.4em 0.4em 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin-top: 100px;
+    margin-left: 30px;
+    list-style-position: inside;
+}
+
+ul li {
+    margin-top: 10px;
+    text-decoration: underline;
+    color: blue;
+}
+
+li:hover {
+    background: violet;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: navy;
+    color: aqua;
+    padding: 30px;
+}
+
+
+footer p:nth-of-type(2) {
+    color: rgb(58, 189, 58);
+    font-style: italic;
+    opacity: 0.8;
+}

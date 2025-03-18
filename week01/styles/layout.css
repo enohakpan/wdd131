@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-size: 1rem;
+    background-color: antiquewhite;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    text-decoration: none;
+}
+
+main aside {
+    background-color: blueviolet;
+    grid-column: 3/4;
+}
+
+main p {
+    background-color: blanchedalmond;
+    grid-column: 3/4;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 1fr auto / auto 1fr auto;
+}
+
+/*main {
+    display: flex;
+    justify-content: space-between;
+}*/

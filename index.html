@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 | Enoh Akpan</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals - Enoh Uwem Akpan. A course project showing my web development skills.">
+    <meta name="author" content="Rubia M. Francesco">
+    <title>WDD 131 | Dynamic Web Fundamentals | Enoh Uwem Akpan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>Enoh Akpan</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Enoh Uwem Akpan</span></h1>
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+            <a href="#">Final Project</a></li>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="all-main">
+            <section class="about-me">
+                <h2 class="title">About Me</h2>
+                <section class="card-about-me">
+                    <div class="about-me-content">
+                        <p>
+                            My name is Enoh and I'm so delighted whenever I get 
+                            to learn more about computing. I'm so about this opportunity
+                            to learn through BYU Pathway program. I really pray that I
+                            take this opportunity very seriously
+                        </p>
+                        <img src="images/enoh-suitable.jpg" alt="Enoh Uwem Akpan" class="profile-img">
+                    </div>
+                    <section class="card-location">
+                        <h2 class="heading">Port Harcourt, Nigeria</h2>
+                        <section class="content">
+                            <div class="flag">
+                                <img src="images/nigeria.jpeg" alt="Official Flag of Madagascar" class="flag-img">
+                                <p><em>Official Flag and coat of arm of my beloved country, Nigeria.</em></p>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Beatae necessitatibus modi totam! Quaerat ducimus 
+                                culpa placeat nam a non distinctio nostrum iusto totam? 
+                                Fugit eaque rem dolor autem mollitia repellendus!
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="card-resources">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Image Placeholder</a></li>
+                </ul>
+            </section>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Enoh Uwem Akpan | Nigeria </p>
+        <p class="lastmodified"> - Last Modification: </p>
+    </footer>
+    <script src="getdates.js"></script>
 </body>
 </html>
