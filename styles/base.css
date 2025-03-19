@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+main {
+    max-width: auto;
+}
+
 
 header h1 {
     background-color: blue;
@@ -85,6 +89,7 @@ nav a {
     text-decoration: underline;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
