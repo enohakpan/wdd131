@@ -11,10 +11,6 @@ body {
     color: #333;
 }
 
-main {
-    max-width: auto;
-}
-
 
 header h1 {
     background-color: blue;
@@ -85,11 +81,14 @@ nav a {
     height: 120px;
 }
 
+.float {
+    float: left;
+}
+
 .card-location h2 {
     text-decoration: underline;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -107,12 +106,16 @@ nav a {
     margin-left: 15px;
 }
 
-.content {
+.under {
+    font-size: xx-small;
+}
+
+/* .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 20px;
-}
+} */
 
 .card-resources {
     border: 1px solid black;

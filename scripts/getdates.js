@@ -5,13 +5,14 @@ window.onload = function () {
     const name = "Enoh Uwem Akpan";
     const country = "Nigeria";
 
-    const copyrightParagraph = document.querySelector("footer p:first-of-type");
-    const modifiedParagraph = document.querySelector("footer p:nth-of-type(2)");
+    const footer = document.querySelector("footer");
 
-    if (copyrightParagraph && modifiedParagraph) {
-        copyrightParagraph.innerHTML = `&copy; ${currentYear} | ${name} | ${country} | <br>`;
-        modifiedParagraph.innerHTML = ` Last modified: ${lastModified}`;
+    if (footer) {
+        footer.innerHTML = `
+            <p>&copy; ${currentYear} | ${name} | ${country}</p>
+            <p style="margin-top: 10px;">Last modified: ${lastModified}</p>
+        `;
     } else {
-        console.error("Footer paragraphs not found. Check your HTML structure.");
+        console.error("Footer not found. Check your HTML structure.");
     }
 };
