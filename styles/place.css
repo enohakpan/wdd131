@@ -1,3 +1,11 @@
+:root {
+    --primary-color: orange;
+    --secondary-color: green;
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --padding: 1rem;
+  }  
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -66,6 +74,14 @@ li {
     width: 200px;
 }
 
+.weather .heading h2::after {
+    content: " ⛅";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    display: inline;
+  }
+  
+
 footer{
     background-color: orange;
     padding: 1rem;
@@ -97,6 +113,17 @@ footer{
         justify-content: center;
     }
 
+    .info {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+      
+
     heading{
         width: 100%;
         display: flex;
@@ -110,12 +137,17 @@ footer{
     
     .data{
         position: static;
-        width: auto;
+        width: 100%;
     }
 
     .weather {
         position: static;
         width: 100%;
+    }
+
+    .weather .heading h2::after {
+        content: url('../images/icons/weather.svg');
+        margin-left: 0.5rem;
     }
 
     .heading {

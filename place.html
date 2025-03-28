@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place project</title>
-    <meta name="auuthor" content="Enoh Uwem Akpan">
+    <meta name="author" content="Enoh Uwem Akpan">
     <meta name="description" content="Week03 WDD131 project on Place">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -15,8 +18,16 @@
     </header>
     <main>
         <section class="hero">
-            <img src="images/week03/lagos1.webp" alt="">
+            <picture>
+              <source srcset="images/week03/lagos1.png" media="(min-width: 800px)" type="image/webp">
+              <source srcset="images/week03/lagos1.webp" media="(min-width: 400px)" type="image/webp">
+              <img src="images/week03/lagos1.webp" alt="Hero image of Benin, Nigeria">
+            </picture>
         </section>
+          
+        <!-- <section class="hero">
+            <img src="images/week03/lagos1.webp" alt="">
+        </section> -->
         <section class="info">
             <section class="data">
                 <section class="heading">
@@ -48,7 +59,7 @@
     </main>
     <footer>
         <p>&copy;<span id="current-year"></span> | Enoh Uwem Akpan</p>
-        <span id="last-modified"></span>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
