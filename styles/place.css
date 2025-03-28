@@ -1,6 +1,6 @@
 :root {
-    --primary-color: orange;
-    --secondary-color: green;
+    --primary-color: brown;
+    --secondary-color: brown;
     --bg-color: #f0f0f0;
     --text-color: #333;
     --padding: 1rem;
@@ -69,6 +69,7 @@ li {
 
 .heading {
     background-color: var(--primary-color);
+    color: white;
     padding: 0.7rem; 
     width: 80%;
 }
@@ -90,9 +91,9 @@ li {
   
 
 footer{
-    background-color: orange;
+    background-color: var(--primary-color);
+    color: white;
     padding: 1rem;
-    font-weight: bold;
     display: grid;
     justify-content: center;
     /* align-items: center; */
@@ -132,12 +133,14 @@ footer{
       
 
     heading{
+        
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .info h2 {
+        color: var(--primary-color);
         display: flex;
         justify-content: center;
     }
