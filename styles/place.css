@@ -161,15 +161,30 @@ footer{
         width: 20px;  /* Smaller size for mobile */
         height: auto;
         margin-left: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-    
+
+    .icon {
+        display: block; 
+        text-align: center; 
+        margin-top: 5px;
+    }
+    .icon img {
+        width: 40px;
+        height: auto;
+    }
 
     .heading {
         background: none;
     }
 
+    .heading::after {
+        content: "";
+        display: block;
+        width: 200px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 5px auto;
+    }
+    
 
 }
