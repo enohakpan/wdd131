@@ -4,14 +4,14 @@ const temples = [
       location: "Salt Lake City, Utah, USA",
       dedicated: "1893-04-06",
       area: 253015,
-      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-lds-252883-wallpaper.jpg"
+      imageUrl: ""
     },
     {
       name: "Accra Ghana Temple",
       location: "Accra, Ghana",
       dedicated: "2004-01-11",
       area: 17500,
-      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-lds-250475-wallpaper.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/salt-lake-temple/photographs/"
     },
     {
       name: "Kyiv Ukraine Temple",
