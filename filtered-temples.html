@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Temples Filtered Display">
+  <meta name="author" content="Your Name">
+  <title>Temples | Filtered</title>
+  <link rel="stylesheet" href="styles/filtered-temple.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Temples</div>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Filtered Temples</h1>
+    <h2>Home</h2>
+    <section class="pictures">
+      <!-- Dynamic temple cards will be inserted here -->
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+  </footer>
+
+  <script>
+    // Year and last modified script
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+    
+    // Menu toggle for mobile
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("show");
+    });
+  </script>
+
+  <!-- Temple filtering script -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
