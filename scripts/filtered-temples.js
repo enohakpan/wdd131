@@ -183,7 +183,4 @@ const temples = [
     })
   })
   
-  // Initial display
   displayTemples(temples)
-  
-  
