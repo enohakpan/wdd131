@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+header, section, footer {
+  border: 2px dashed #333;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Label Colors */
+#site-name {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+#site-purpose {
+  background-color: #0A1F44;
+  color: white;
+}
+
+#scenarios {
+  background-color: #D4D4D4;
+}
+
+#color-schema {
+  background-color: #B25E2D;
+  color: white;
+}
+
+#typography {
+  background-color: #556B2F;
+  color: white;
+}
+
+#wireframe {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+footer {
+  background-color: #1C1C1C;
+  color: white;
+}

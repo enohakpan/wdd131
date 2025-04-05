@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Enoh Uwem Akpan">
+  <meta name="descriptions" content="Week05 Product Review Form Assignment">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+    <header>
+      <h1>Product Review</h1>
+    </header>
+  
+    <main>
+      <form method="get" action="review.html">
+        <label for="productName">Product Name</label>
+        <select id="productName" name="productName" required>
+          <option value="">Choose a Product …</option>
+        </select>
+  
+        <fieldset>
+          <legend>Overall Rating</legend>
+          <label><input type="radio" name="rating" value="1" required />★</label>
+          <label><input type="radio" name="rating" value="2" />★★</label>
+          <label><input type="radio" name="rating" value="3" />★★★</label>
+          <label><input type="radio" name="rating" value="4" />★★★★</label>
+          <label><input type="radio" name="rating" value="5" />★★★★★</label>
+        </fieldset>
+  
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" name="installDate" required />
+  
+        <fieldset>
+          <legend>Which features did you find useful in the product?<br><em>(Check all that apply)</em></legend>
+          <label><input type="checkbox" name="features" value="Durability" /> Durability</label>
+          <label><input type="checkbox" name="features" value="Ease of Use" /> Ease of Use</label>
+          <label><input type="checkbox" name="features" value="Performance" /> Performance</label>
+          <label><input type="checkbox" name="features" value="Design" /> Design</label>
+        </fieldset>
+  
+        <label for="review">Written Review <small>(Optional)</small></label>
+        <textarea id="review" name="review" rows="5"></textarea>
+  
+        <label for="username">Your Name <small>(Optional)</small></label>
+        <input type="text" id="username" name="username" />
+  
+        <button type="submit">Post Review</button>
+      </form>
+    </main>
+  
+    <footer>
+      <p>&copy; <span id="year"></span>  Enoh Uwem Akpan <br>
+      Nigeria<br>
+      Last Modification: <span id="lastModified"></span></p>
+    </footer>
+  
+    <script src="scripts/form.js" defer></script>
+  </body>
+  </html>
