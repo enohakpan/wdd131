@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | De Dash Dash</title>
-  <link rel="stylesheet" href="Styles/de-dash-dash.css">
-  <script src="Scripts/shop.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Enoh Uwem Akpan">
+    <meta name="description" content="De Dash-Dash Fashion and Designing Concept - Custom fashion pieces tailored for the modern man">
+    <title>De Dash-Dash | Fashion & Designing Concept</title>
+    <link rel="stylesheet" href="Styles/de-dash-dash.css">
+    <script src="Scripts/de-dash-dash.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <section class="logo-box">
-                <div class="logo-img">
-                    <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
-                </div>
-                
-                <!-- Add hamburger button -->
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span class="hamburger-icon"></span>
-                </button>
-                
-                <nav class="main-nav">
-                    <ul class="header-nav">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </section>
+          <section class="logo-box">
+            <div class="logo-img">
+              <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
+            </div>
+            
+            <!-- Simplified hamburger button -->
+            <button onclick="toggleMenu()" class="mobile-menu-toggle" aria-label="Toggle menu">
+              <span class="hamburger-icon"></span>
+            </button>
+            
+            <nav id="mainNav" class="main-nav">
+              <ul class="header-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </nav>
+          </section>
         </div>
-    </header>
+      </header>
 
   <main class="shop-main">
     <h1 class="shop-title">Shop Our Latest Collection</h1>
@@ -91,4 +93,11 @@
   </footer>
   
 </body>
+
+<script>
+    function toggleMenu() {
+      document.getElementById('mainNav').classList.toggle('active');
+      document.querySelector('.mobile-menu-toggle').classList.toggle('active');
+    }
+  </script>
 </html>

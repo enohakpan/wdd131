@@ -44,17 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', function() {
-      // Toggle active class on menu button
       this.classList.toggle('active');
       
-      // Toggle active class on navigation
       mainNav.classList.toggle('active');
       
-      // Prevent scrolling when menu is open
       body.classList.toggle('menu-open');
     });
     
-    // Close menu when clicking on a link
     const navLinks = mainNav.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -76,5 +72,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Add this to prevent scrolling when menu is open
 document.body.style.overflow = 'auto';
