@@ -5,91 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Enoh Uwem Akpan">
     <meta name="description" content="De Dash-Dash Fashion and Designing Concept - Custom fashion pieces tailored for the modern man">
-    <title>De Dash-Dash | Fashion & Designing Concept</title>
+    <title>Contact | De Dash-Dash</title>
     <link rel="stylesheet" href="Styles/de-dash-dash.css">
     <script src="Scripts/de-dash-dash.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-          <section class="logo-box">
-            <div class="logo-img">
-              <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
-            </div>
-            
-            <!-- Simplified hamburger button -->
-            <button onclick="toggleMenu()" class="mobile-menu-toggle" aria-label="Toggle menu">
-              <span class="hamburger-icon"></span>
-            </button>
-            
-            <nav id="mainNav" class="main-nav">
-              <ul class="header-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </nav>
-          </section>
+            <section class="logo-box">
+                <div class="logo-img">
+                    <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
+                </div>
+                
+                <!-- Shopping cart icon with counter -->
+                <div class="cart-container">
+                    <button id="cartButton" class="cart-button" aria-label="Shopping Cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                
+                <!-- Add hamburger button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-icon"></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="header-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
-      </header>
+    </header>
 
-    <section class="about-us-container">
-        <h1>About Us</h1>
-        <p>At De Dash Dash Fashion, we are dedicated to bringing you the latest trends in men's fashion. Our designs are created with passion and attention to detail, ensuring that every piece reflects our commitment to style and quality. We believe in making fashion accessible and inclusive for men of all shapes and sizes. Whether you're looking for casual wear or something more formal, we have something for every occasion.</p>
-        <p>We strive to provide a seamless shopping experience and high-quality customer service. Your satisfaction is our top priority, and we are always here to help with any questions or concerns.</p>
-    </section>
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cartTotal">₦0</span></p>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
 
-    <section class="contact-container">
-        <h1>Contact Us</h1>
-        <p>If you have any questions or comments, feel free to reach out to us using the form below.</p>
+    <main>
+        <section class="about-us-container">
+            <h1>About Us</h1>
+            <p>At De Dash Dash Fashion, we are dedicated to bringing you the latest trends in men's fashion. Our designs are created with passion and attention to detail, ensuring that every piece reflects our commitment to style and quality. We believe in making fashion accessible and inclusive for men of all shapes and sizes. Whether you're looking for casual wear or something more formal, we have something for every occasion.</p>
+            <p>We strive to provide a seamless shopping experience and high-quality customer service. Your satisfaction is our top priority, and we are always here to help with any questions or concerns.</p>
+        </section>
 
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
+        <section class="contact-container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or comments, feel free to reach out to us using the form below.</p>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
+            <form id="contactForm" class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="order">Order Question</option>
+                    <option value="product">Product Information</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="form-group">
+                    <input type="checkbox" id="saveInfo" name="saveInfo">
+                    <label for="saveInfo">Save my information for next time</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div id="formMessage" class="form-message"></div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-heading">Frequently Asked Questions</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">How long does shipping take?</button>
+                        <div class="accordion-content">
+                            <p>Standard shipping typically takes 3-5 business days within Nigeria. International shipping may take 7-14 business days depending on the destination.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">What is your return policy?</button>
+                        <div class="accordion-content">
+                            <p>We accept returns within 14 days of delivery. Items must be unworn, unwashed, and with all original tags attached. Please contact our customer service team to initiate a return.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you offer custom tailoring?</button>
+                        <div class="accordion-content">
+                            <p>Yes, we offer custom tailoring services. Please visit our shop or contact us directly to discuss your specific requirements and measurements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">How do I care for my De Dash Dash garments?</button>
+                        <div class="accordion-content">
+                            <p>Each garment comes with specific care instructions. Generally, we recommend dry cleaning for suits and gentle washing for shirts. Always check the care label for detailed instructions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
-          <div class="footer-content">
-            <section class="footer-section">
-              <h3>About De Dash Dash</h3>
-              <p>Where tradition meets trend. De Dash Dash brings you custom fashion pieces tailored for the modern man.</p>
-            </section>
-        
-            <section class="footer-section">
-              <h3>Follow Us</h3>
-              <ul class="footer-social">
-                <li><a href="https://www.facebook.com/share/1EK7NKLMek/?mibextid=qi2Omg" aria-label="Facebook">Facebook</a></li>
-                <li><a href="https://www.instagram.com/enohakpan59600?igsh=MWw3cGV0NDZlenBnaw==" aria-label="Instagram">Instagram</a></li>
-                <li><a href="https://wa.me/message/CI43N5XWHIPFE1" aria-label="WhatsApp">WhatsApp</a></li>
-              </ul>
-            </section>
-        
-            <section class="footer-section">
-              <h3>Contact</h3>
-              <p>Email: <a href="mailto:dashdash59600@gmail.com">support@dedashdash.com</a></p>
-              <p>Phone: <a href="tel:+2349027554682">+234 9027554682</a></p>
-            </section>
-          </div>
-          <p class="footer-bottom">&copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.</p>
+            <div class="footer-content">
+                <section class="footer-section">
+                    <h3>About De Dash Dash</h3>
+                    <p>Where tradition meets trend. De Dash Dash brings you custom fashion pieces tailored for the modern man.</p>
+                </section>
+            
+                <section class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul class="footer-social">
+                        <li><a href="https://www.facebook.com/share/1EK7NKLMek/?mibextid=qi2Omg" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/enohakpan59600?igsh=MWw3cGV0NDZlenBnaw==" aria-label="Instagram">Instagram</a></li>
+                        <li><a href="https://wa.me/message/CI43N5XWHIPFE1" aria-label="WhatsApp">WhatsApp</a></li>
+                    </ul>
+                </section>
+            
+                <section class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:dashdash59600@gmail.com">support@dedashdash.com</a></p>
+                    <p>Phone: <a href="tel:+2349027554682">+234 9027554682</a></p>
+                </section>
+            </div>
+            <p class="footer-bottom">
+                &copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.
+                <a href="references.html">References</a>
+            </p>
         </div>
-      </footer>
+    </footer>
 </body>
-
-<script>
-    function toggleMenu() {
-      document.getElementById('mainNav').classList.toggle('active');
-      document.querySelector('.mobile-menu-toggle').classList.toggle('active');
-    }
-</script>
 </html>

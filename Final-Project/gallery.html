@@ -5,110 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Enoh Uwem Akpan">
     <meta name="description" content="De Dash-Dash Fashion and Designing Concept - Custom fashion pieces tailored for the modern man">
-    <title>De Dash-Dash | Fashion & Designing Concept</title>
+    <title>Gallery | De Dash-Dash</title>
     <link rel="stylesheet" href="Styles/de-dash-dash.css">
     <script src="Scripts/de-dash-dash.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-          <section class="logo-box">
-            <div class="logo-img">
-              <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
+            <section class="logo-box">
+                <div class="logo-img">
+                    <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
+                </div>
+                
+                <!-- Shopping cart icon with counter -->
+                <div class="cart-container">
+                    <button id="cartButton" class="cart-button" aria-label="Shopping Cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                
+                <!-- Add hamburger button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-icon"></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="header-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be inserted here -->
             </div>
-            
-            <!-- Simplified hamburger button -->
-            <button onclick="toggleMenu()" class="mobile-menu-toggle" aria-label="Toggle menu">
-              <span class="hamburger-icon"></span>
-            </button>
-            
-            <nav id="mainNav" class="main-nav">
-              <ul class="header-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </nav>
-          </section>
+            <div class="cart-total">
+                <p>Total: <span id="cartTotal">₦0</span></p>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            </div>
         </div>
-      </header>      
-  <main>
-    <section class="gallery-section">
-      <div class="container">
-        <div class="gallery-intro">
-          <h1 class="section-heading">Fashion Gallery</h1>
-          <p>Explore our latest designs and collections. We surely have got the best out there. If you've got De Dash-Dash, then you've got it all.... Just Check us out.</p>
-        </div>
-        
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="https://i.pinimg.com/originals/16/15/08/161508897790813cb6a399fb27598967.jpg" alt="Elegant Navy Suit">
-            <p>Elegant Navy Suit</p>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="https://i.pinimg.com/originals/ad/65/5e/ad655e5f39b324a30c41e3ec03224fed.jpg" alt="Smart White Shirt">
-            <p>Smart White Shirt</p>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="https://cdn11.bigcommerce.com/s-hiuea1t2mw/images/stencil/1280x1280/products/48235/140019/Callaway-X-Series-Slim-Fit-Tech-Trouser---Navy-Blazer-02__59543.1716453326.jpg?c=2" alt="Smart Navy Trouser">
-            <p>Smart Navy Trouser</p>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="https://i.pinimg.com/originals/03/13/67/0313671bcb93a721da577995db9b4c00.jpg" alt="Indian Suit">
-            <p>Indian Suit</p>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="https://img.freepik.com/premium-psd/gray-suit-with-white-tie-black-tie_68880-105585.jpg" alt="Elegant Grey Suit">
-            <p>Elegant Grey Suit</p>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="https://www.apetogentleman.com/wp-content/uploads/2022/04/smarttrouserswool3-720x720.jpg" alt="Smart Ash Trouser">
-            <p>Smart Ash Trouser</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <section class="footer-section">
-          <h3>About De Dash Dash</h3>
-          <p>Where tradition meets trend. De Dash Dash brings you custom fashion pieces tailored for the modern man.</p>
-        </section>
-    
-        <section class="footer-section">
-          <h3>Follow Us</h3>
-          <ul class="footer-social">
-            <li><a href="https://www.facebook.com/share/1EK7NKLMek/?mibextid=qi2Omg" aria-label="Facebook">Facebook</a></li>
-            <li><a href="https://www.instagram.com/enohakpan59600?igsh=MWw3cGV0NDZlenBnaw==" aria-label="Instagram">Instagram</a></li>
-            <li><a href="https://wa.me/message/CI43N5XWHIPFE1" aria-label="WhatsApp">WhatsApp</a></li>
-          </ul>
-        </section>
-    
-        <section class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: <a href="mailto:dashdash59600@gmail.com">support@dedashdash.com</a></p>
-          <p>Phone: <a href="tel:+2349027554682">+234 9027554682</a></p>
-        </section>
-      </div>
-      <p class="footer-bottom">&copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.</p>
     </div>
-  </footer>
+
+    <main>
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-intro">
+                    <h1 class="section-heading">Fashion Gallery</h1>
+                    <p>Explore our latest designs and collections. We surely have got the best out there. If you've got De Dash-Dash, then you've got it all.... Just Check us out.</p>
+                </div>
+                
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="suits">Suits</button>
+                    <button class="filter-btn" data-filter="shirts">Shirts</button>
+                    <button class="filter-btn" data-filter="trousers">Trousers</button>
+                </div>
+                
+                <div id="galleryGrid" class="gallery-grid">
+                    <!-- Gallery items will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox for Gallery Images -->
+        <div id="galleryLightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightboxImage" class="lightbox-content">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+            <button class="lightbox-prev">❮</button>
+            <button class="lightbox-next">❯</button>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <section class="footer-section">
+                    <h3>About De Dash Dash</h3>
+                    <p>Where tradition meets trend. De Dash Dash brings you custom fashion pieces tailored for the modern man.</p>
+                </section>
+            
+                <section class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul class="footer-social">
+                        <li><a href="https://www.facebook.com/share/1EK7NKLMek/?mibextid=qi2Omg" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/enohakpan59600?igsh=MWw3cGV0NDZlenBnaw==" aria-label="Instagram">Instagram</a></li>
+                        <li><a href="https://wa.me/message/CI43N5XWHIPFE1" aria-label="WhatsApp">WhatsApp</a></li>
+                    </ul>
+                </section>
+            
+                <section class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:dashdash59600@gmail.com">support@dedashdash.com</a></p>
+                    <p>Phone: <a href="tel:+2349027554682">+234 9027554682</a></p>
+                </section>
+            </div>
+            <p class="footer-bottom">
+                &copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.
+                <a href="references.html">References</a>
+            </p>
+        </div>
+    </footer>
 </body>
-
-<script>
-    function toggleMenu() {
-      document.getElementById('mainNav').classList.toggle('active');
-      document.querySelector('.mobile-menu-toggle').classList.toggle('active');
-    }
-  </script>
-
 </html>

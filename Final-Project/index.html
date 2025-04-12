@@ -17,6 +17,14 @@
                     <img src="Images/Brown And White Minimalist Initial Logo_20241005_115521_0000.png" alt="De Dash-Dash Logo">
                 </div>
                 
+                <!-- Shopping cart icon with counter -->
+                <div class="cart-container">
+                    <button id="cartButton" class="cart-button" aria-label="Shopping Cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                
                 <!-- Add hamburger button -->
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span class="hamburger-icon"></span>
@@ -34,11 +42,27 @@
         </div>
     </header>
 
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cartTotal">₦0</span></p>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-img">
-                <img src="https://www.creativefabrica.com/wp-content/uploads/2023/08/09/Create-A-Beautiful-Picture-For-Mens-Fashion-For-Online-Selling-76549823-1.png" alt="The Beauty of Fashion">
+                <img src="https://www.creativefabrica.com/wp-content/uploads/2023/08/09/Create-A-Beautiful-Picture-For-Mens-Fashion-For-Online-Selling-76549823-1.png" alt="The Beauty of Fashion" loading="lazy">
                 <div class="hero-content">
                     <h1 class="hero-title">Elevate Your Style</h1>
                     <p class="hero-text">Where tradition meets trend. Custom fashion pieces tailored for the modern man.</p>
@@ -53,42 +77,52 @@
                 <h2 class="section-heading">Featured Collections</h2>
                 <div class="collections-slide">
                     <div class="slide-show fade">
-                        <img src="https://i.pinimg.com/originals/16/15/08/161508897790813cb6a399fb27598967.jpg" alt="Elegant Navy Suit">
+                        <img src="Images/navy-suit.jpg" alt="Elegant Navy Suit" loading="lazy">
                         <p>Elegant Navy Suit</p>
                     </div>
 
                     <div class="slide-show fade">
-                        <img src="https://i.pinimg.com/originals/ad/65/5e/ad655e5f39b324a30c41e3ec03224fed.jpg" alt="Smart White Shirt">
+                        <img src="Images/white-shhirt.jpg" alt="Smart White Shirt" loading="lazy">
                         <p>Smart White Shirt</p>
                     </div>
                     
                     <div class="slide-show fade">
-                        <img src="https://cdn11.bigcommerce.com/s-hiuea1t2mw/images/stencil/1280x1280/products/48235/140019/Callaway-X-Series-Slim-Fit-Tech-Trouser---Navy-Blazer-02__59543.1716453326.jpg?c=2" alt="Smart Navy Trouser">
+                        <img src="Images/navy-trouser.jpg" alt="Smart Navy Trouser" loading="lazy">
                         <p>Smart Navy Trouser</p>
                     </div>
                     
                     <div class="slide-show fade">
-                        <img src="https://i.pinimg.com/originals/03/13/67/0313671bcb93a721da577995db9b4c00.jpg" alt="Indian Suit">
+                        <img src="Images/indian-suit.jpg" alt="Indian Suit" loading="lazy">
                         <p>Indian Suit</p>
                     </div>
                     
                     <div class="slide-show fade">
-                        <img src="https://img.freepik.com/premium-psd/gray-suit-with-white-tie-black-tie_68880-105585.jpg" alt="Elegant Grey Suit">
+                        <img src="Images/gray-suit.jpg" alt="Elegant Grey Suit" loading="lazy">
                         <p>Elegant Grey Suit</p>
                     </div>
                     
                     <div class="slide-show fade">
-                        <img src="https://www.apetogentleman.com/wp-content/uploads/2022/04/smarttrouserswool3-720x720.jpg" alt="Smart Ash Trouser">
+                        <img src="Images/ash-pants.webp" alt="Smart Ash Trouser" loading="lazy">
                         <p>Smart Ash Trouser</p>
                     </div>
                     
                     <div class="slide-show fade">
-                        <img src="https://charcoal.com.pk/cdn/shop/files/DSC08928_863f5016-e32b-40d2-a254-c895bae354e8.jpg?v=1718106167&width=200" alt="Smart Spotted Shirt">
+                        <img src="Images/spotted-shirt.jpg" alt="Smart Spotted Shirt" loading="lazy">
                         <p>Smart Spotted Shirt</p>
                     </div>
                     
                     <button class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">❮</button>
                     <button class="next" onclick="plusSlides(1)" aria-label="Next slide">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-heading">Best Sellers</h2>
+                <div id="featuredProductsContainer" class="featured-products-grid">
+                    <!-- Products will be dynamically inserted here -->
                 </div>
             </div>
         </section>
@@ -99,23 +133,36 @@
                 <h2 class="section-heading">Testimonials</h2>
                 <div class="testimony-container">
                     <article class="comnt">
-                        <img src="Images/enoh-suitable.jpg" alt="John Doe profile">
+                        <img src="Images/enoh-suitable.jpg" alt="John Doe profile" loading="lazy">
                         <p class="testimony-txt">De Dash Dash has completely transformed my wardrobe. Their attention to detail and quality fabrics make their pieces stand out from anything else I've worn.</p>
                         <p class="customer-name">John Doe</p>
                     </article>
         
                     <article class="comnt">
-                        <img src="Images/enoh-suitable.jpg" alt="Michael Smith profile">
+                        <img src="Images/enoh-suitable.jpg" alt="Michael Smith profile" loading="lazy">
                         <p class="testimony-txt">I've been a loyal customer for years. Their designs are timeless yet modern, and the fit is always perfect. Couldn't recommend them more highly!</p>
                         <p class="customer-name">Michael Smith</p>
                     </article>
         
                     <article class="comnt">
-                        <img src="Images/enoh-suitable.jpg" alt="David Johnson profile">
+                        <img src="Images/enoh-suitable.jpg" alt="David Johnson profile" loading="lazy">
                         <p class="testimony-txt">The customer service at De Dash Dash is exceptional. They went above and beyond to ensure my custom suit was exactly what I wanted for my wedding day.</p>
                         <p class="customer-name">David Johnson</p>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2 class="section-heading">Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest trends and exclusive offers.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterMessage" class="newsletter-message"></div>
             </div>
         </section>
     </main>
@@ -126,6 +173,12 @@
             <section class="footer-section">
               <h3>About De Dash Dash</h3>
               <p>Where tradition meets trend. De Dash Dash brings you custom fashion pieces tailored for the modern man.</p>
+              <ul class="footer-social">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
             </section>
         
             <section class="footer-section">
@@ -143,7 +196,10 @@
               <p>Phone: <a href="tel:+2349027554682">+234 9027554682</a></p>
             </section>
           </div>
-          <p class="footer-bottom">&copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.</p>
+          <p class="footer-bottom">
+            &copy; 2025 De Dash Dash Fashion & Designing Concept. All rights reserved.
+            <a href="references.html">References</a>
+          </p>
         </div>
       </footer>
 </body>
