@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
   
   // Initialize shopping cart
-  initShoppingCart();
+  initShoppingCart(); 
   
   // Initialize featured products on home page
   if (document.getElementById('featuredProductsContainer')) {

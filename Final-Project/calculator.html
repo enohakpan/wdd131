@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <input class="display1" readonly placeholder="0" aria-label="First Number" inputmode="numeric" />
+    <input class="display2" readonly placeholder="+" aria-label="Operator" />
+    <input class="display3" readonly placeholder="0" aria-label="Second Number" inputmode="numeric" />
+
+    <div class="buttons">
+      <button onclick="Calculator.displayNumber('1')">1</button>
+      <button onclick="Calculator.displayNumber('2')">2</button>
+      <button onclick="Calculator.displayNumber('3')">3</button>
+      <button onclick="Calculator.displayNumber('+')">+</button>
+
+      <button onclick="Calculator.displayNumber('4')">4</button>
+      <button onclick="Calculator.displayNumber('5')">5</button>
+      <button onclick="Calculator.displayNumber('6')">6</button>
+      <button onclick="Calculator.displayNumber('-')">-</button>
+
+      <button onclick="Calculator.displayNumber('7')">7</button>
+      <button onclick="Calculator.displayNumber('8')">8</button>
+      <button onclick="Calculator.displayNumber('9')">9</button>
+      <button onclick="Calculator.displayNumber('*')">*</button>
+
+      <button onclick="Calculator.displayNumber('0')">0</button>
+      <button onclick="Calculator.clearDisplay()">C</button>
+      <button onclick="Calculator.calculate()">=</button>
+      <button onclick="Calculator.displayNumber('/')">/</button>
+
+      <button onclick="Calculator.deleteLast()">Del</button>
+    </div>
+
+    <div id="history-container">
+      <h2>History</h2>
+      <ul id="history-list"></ul>
+      <button id="clear-history">Clear History</button>
+    </div>
+  </div>
+
+  <script src="Scripts/calculator.js"></script>
+</body>
+</html>
